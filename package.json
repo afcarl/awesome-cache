@@ -1,0 +1,32 @@
+{
+  "name": "awesome-cache",
+  "version": "0.1.0",
+  "description": "A simple but powerful in memory cache for Node JS",
+  "main": "awesome-cache.js",
+  "engines": {
+    "node": ">=6.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaretburkett/awesome-cache.git"
+  },
+  "keywords": [
+    "cache",
+    "memcache",
+    "redis",
+    "awesome-cache",
+    "inmemory"
+  ],
+  "author": "Jaret Burkett <jaretburkett@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaretburkett/awesome-cache/issues"
+  },
+  "homepage": "https://github.com/jaretburkett/awesome-cache#readme",
+  "dependencies": {
+    "moment": "^2.22.1"
+  }
+}
