@@ -1,10 +1,10 @@
-## awesome-cache
+# awesome-cache
 
-#### A simple but powerful in memory cache for Node JS
+### A simple but powerful in memory cache for Node JS
 
 This module requires Node JS >v6.4
 
-### Install
+## Install
 
 NPM
 
@@ -18,7 +18,7 @@ Yarn
 yarn add awesome-cache
 ```
 
-### Usage
+## Usage
 
 Basic usage
 
@@ -51,7 +51,7 @@ let countArray = cache.getCache('count');
 cache.destroy();
 ```
 
-### Setup
+## Setup
 
 ### The timer
 
@@ -72,9 +72,9 @@ highly optimized and should be able to handle very large caches with minimum ove
 
 
 
-### Methods
+## Methods
 
-##### .addCache(key, value, expireSeconds = null)
+### .addCache(key, value, expireSeconds = null)
 
 The .addCache method is a basic cache that is removed after the expire time. The value can 
 be anything (string|object|array|number). 
@@ -86,13 +86,13 @@ be anything (string|object|array|number).
 | expireSeconds | number/null | The seconds until cache is removed. Set to null to never remove it (default) |
 
 
-##### .addToCacheArray(key, value, arrayLength = 10)
+### .addToCacheArray(key, value, arrayLength = 10)
 
-The .addToCacheArray method creates or adds to a truncated array cache. 
+The **.addToCacheArray** method creates or adds to a truncated array cache. 
 This cache type is not removed over time, but is limited to the arrayLength. 
 Newer items are added at the end and older items will be at the beginning of the 
 array until the array overflows, in which case the older items will be removed.
-The value can be anything (string|object|array|number). 
+The value can be anything `string|object|array|number`. 
 
 | Parameter | Type | Description |
 | --- | ---| --- |
@@ -100,9 +100,9 @@ The value can be anything (string|object|array|number).
 | value | any | The value to be added to end of array |
 | arrayLength | number | The maximum length of the array |
 
-##### .clearCache(key = null)
+### .clearCache(key = null)
 
-The .clearCache method will clear a specific cache if a key is passed. If no key is passed, it will clear
+The **.clearCache** method will clear a specific cache if a key is passed. If no key is passed, it will clear
 the entire cache giving you a fresh start.
 
 | Parameter | Type | Description |
@@ -110,9 +110,9 @@ the entire cache giving you a fresh start.
 | key | string | Cache to remove (optional) |
 
 
-##### .getCache(key)
+### .getCache(key)
 
-The .getCache method will return the value in the cache for a key. If the value does not exist 
+The **.getCache** method will return the value in the cache for a key. If the value does not exist 
 because it has timed out or has not been created, it will return `null`
 
 | Parameter | Type | Description |
@@ -120,18 +120,18 @@ because it has timed out or has not been created, it will return `null`
 | key | string | Cache to get value of |
 
 
-##### .hasCache(key)
+### .hasCache(key)
 
-The .hasCache method will return a boolean `true|false` if the key passed has a cache.
+The **.hasCache** method will return a boolean `true|false` if the key passed has a cache.
 
 | Parameter | Type | Description |
 | --- | ---| --- |
 | key | string | Cache to check |
 
 
-##### .destroy()
+### .destroy()
 
-The .hasCache method will destroy the cache and stop the background timer. This is needed 
+The **.hasCache** method will destroy the cache and stop the background timer. This is needed 
 if you have code that will exit after running a process. awesome-cache has a built in interval to 
 manage the cache and it will keep the process open if not destroyed.
 
@@ -140,13 +140,13 @@ by calling `._startTimer()`, however, previously cached keys will have been dest
 
 
 
-### Full Example
+## Full Example
 
 You can see a full example in the [example.js](https://github.com/jaretburkett/awesome-cache/blob/master/example.js) file.
 
-### Important Notes
+## Important Notes
 
-awesome-cache has an interval function that will run forever. If you use it in a program that will 
+**awesome-cache** has an interval function that will run forever. If you use it in a program that will 
 run and then exit, the program will continue to run forever unless you kill the program with a SIGKILL
 or you stop the cache.
 
@@ -163,12 +163,12 @@ process.exit();
 Both the basic cache and and array cache share cache key names. It is important to use unique keys for both
 as they could overwrite each other or provids unexpected results.
 
-### Dependencies
+## Dependencies
 
-awesome-cache only has one dependency and this is `moment`. It will reliance on this library
-will likely be removed in the future, but it made programming this so much easier. 
+awesome-cache only has one dependency and this is **moment**. Reliance on this library
+will likely be removed in the future, but it made programming this so much easier for now and I love **moment**. 
 
-### Contribute
+## Contribute
 
 If you would like to contribute to the development of this project. Feel free to fork, edit, and make a 
 pull request. Please do not submit any breaking changes, but additional features or optimizations are always welcome.
