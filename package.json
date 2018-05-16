@@ -1,6 +1,6 @@
 {
   "name": "awesome-cache",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple but powerful in memory cache for Node JS",
   "main": "awesome-cache.js",
   "engines": {
