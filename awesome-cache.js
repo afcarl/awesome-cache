@@ -1,6 +1,6 @@
 const moment = require('moment');
 class Cache{
-    constructor(opts){
+    constructor(opts = {}){
         this.cleanInterval = opts.cleanInterval || 1000;
         this._timer = null;
         this._mainCache = {};
